@@ -30,23 +30,37 @@
 //     Console.Write(" \n Попробуй ещё раз \n ");
 // }
 
-double Distance(int[]FirstPoint,int[] SecondPoint)
+// double Distance(int[]FirstPoint,int[] SecondPoint)
+// {
+//     double distance= 0;
+//     distance = Math.Sqrt(Math.Pow((SecondPoint[0]-FirstPoint[0]),2)+Math.Pow((SecondPoint[1]-FirstPoint[1]),2)+Math.Pow((SecondPoint[2]-FirstPoint[2]),2));
+//     return distance;
+// }
+// Console.Write("\nРасчитаем расстояние между точками\n");
+// int[] FirstPoint = new int[3];
+// int[] SecondPoint = new int[3];
+// Console.Write("\nВведите координаты первой точки:\n");
+// for (int i = 0; i < FirstPoint.Length; i++)
+// {
+//     FirstPoint[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// Console.Write("\nВведите координаты второй точки:\n");
+// for (int i = 0; i < SecondPoint.Length; i++)
+// {
+//     SecondPoint[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// Console.Write($"Расстояние между точками равно: {Distance(FirstPoint,SecondPoint)}");
+
+
+int CubesTable(int number)
 {
-    double distance= 0;
-    distance = Math.Sqrt(Math.Pow((SecondPoint[0]-FirstPoint[0]),2)+Math.Pow((SecondPoint[1]-FirstPoint[1]),2)+Math.Pow((SecondPoint[2]-FirstPoint[2]),2));
-    return distance;
+    for (int i = 1; i <= number; i++)
+    {
+        Console.Write(" куб числа {0} = {1}\n", i, Math.Pow(i, 3));
+    }
+
+    return number;
 }
-Console.Write("\nРасчитаем расстояние между точками\n");
-int[] FirstPoint = new int[3];
-int[] SecondPoint = new int[3];
-Console.Write("\nВведите координаты первой точки:\n");
-for (int i = 0; i < FirstPoint.Length; i++)
-{
-    FirstPoint[i] = Convert.ToInt32(Console.ReadLine());
-}
-Console.Write("\nВведите координаты второй точки:\n");
-for (int i = 0; i < SecondPoint.Length; i++)
-{
-    SecondPoint[i] = Convert.ToInt32(Console.ReadLine());
-}
-Console.Write($"Расстояние между точками равно: {Distance(FirstPoint,SecondPoint)}");
+Console.WriteLine("Введите число для таблицы кубов");
+int number = Convert.ToInt32(Console.ReadLine());
+CubesTable(number);
